@@ -15,8 +15,8 @@ function onYouTubeIframeAPIReady() {
         autohide: 0 // Hide video controls when playing
         },
         events: {
-        onReady: function(e) {
-            e.target.mute();
+            onReady: function(e) {
+                e.target.mute();
                 var bplay = 0;
                 var bottom = $('.get_top_video_start').offset().top;
                 $(window).scroll(function(ev) {       
@@ -26,8 +26,7 @@ function onYouTubeIframeAPIReady() {
                         ev.preventDefault(); 
                     }
                     
-                });
-            }
-        }
-    });
+            });
+         }
+        }});
 }
