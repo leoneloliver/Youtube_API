@@ -13,20 +13,26 @@ function onYouTubeIframeAPIReady() {
         cc_load_policty: 0, // Hide closed captions
         iv_load_policy: 3, // Hide the Video Annotations
         autohide: 0 // Hide video controls when playing
-        },
-        events: {
-            onReady: function(e) {
-                e.target.mute();
-                var bplay = 0;
-                var bottom = $('.get_top_video_start').offset().top;
-                $(window).scroll(function(ev) {       
-                    if ($(this).scrollTop() > bottom && bplay == 0){
-                        player.playVideo();
-                        bplay = 1;
-                        ev.preventDefault(); 
-                    }
-                    
+    },
+    events: {
+        onReady: function(e) {
+            e.target.mute();
+            var bplay = 0;
+            var bottom = $('.get_top_video_start').offset().top;
+            $(window).scroll(function(ev) {       
+                if ($(this).scrollTop() > bottom && bplay == 0){
+                    player.playVideo();
+                    bplay = 1;
+                    ev.preventDefault(); 
+                }              
             });
-         }
-        }});
+        },
+        // loop video  
+        onStateChange: function(e){
+            var id = '1AzeIjQaZ58';
+            if(e.data === YT.PlayerState.ENDED){
+                player.loadVideoById(id);
+            }
+        }
+    }});
 }
