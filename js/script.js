@@ -1,8 +1,9 @@
 // Youtube API
 function onYouTubeIframeAPIReady() {
     var player;
+    var vid = '1AzeIjQaZ58';
     player = new YT.Player('video', {
-        videoId: '1AzeIjQaZ58', // YouTube Video ID
+        videoId: vid , // YouTube Video ID
         playerVars: {
         autoplay: 0, // Auto-play the video on load
         controls: 1, // Show pause/play buttons in player
@@ -29,7 +30,7 @@ function onYouTubeIframeAPIReady() {
         },
         // loop video  
         onStateChange: function(e){
-            var id = '1AzeIjQaZ58';
+            var id = vid;
             if(e.data === YT.PlayerState.ENDED){
                 player.loadVideoById(id);
             }
