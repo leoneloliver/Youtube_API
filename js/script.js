@@ -16,6 +16,7 @@ function onYouTubeIframeAPIReady() {
         iv_load_policy: 3, // Hide the Video Annotations
         autohide: 0 // Hide video controls when playing
     },
+    // setup events
     events: {
         onReady: function(e) {
             e.target.mute();
