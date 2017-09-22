@@ -1,4 +1,4 @@
-// Youtube API
+// Youtube API - loading videos
 function onYouTubeIframeAPIReady() {
     var player;
     //setting video id variable
