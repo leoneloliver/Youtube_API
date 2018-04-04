@@ -2,7 +2,7 @@
 function onYouTubeIframeAPIReady() {
     var player;
     //setting video id variable
-    var vid = '1AzeIjQaZ58';
+    var vid = 'zrjDW8fSQU8';
     player = new YT.Player('video', {
         videoId: vid , // YouTube Video ID
         playerVars: {
